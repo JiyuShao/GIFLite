@@ -1,0 +1,46 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "start": {
+      "persistent": true,
+      "cache": false
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "cache": false
+    },
+    "test": {
+      "outputs": ["coverage/**/*"],
+      "dependsOn": ["build"],
+      "cache": false
+    },
+    "test:coverage": {
+      "dependsOn": ["build"]
+    },
+    "//#lint:es": {
+      "inputs": [".eslint.config.mjs", "packages/**/src/"]
+    },
+    "//#lint:style": {
+      "inputs": [".stylelintrc", "packages/**/src/"]
+    },
+    "//#lint:prettier": {
+      "inputs": [".prettierrc", ".prettierignore", "packages/**/src/"]
+    },
+    "//#lint:ts": {
+      "inputs": [
+        "packages/configs/tsconfig/*.json",
+        "packages/**/src/tsconfig.json",
+        "packages/**/src/**/*.ts"
+      ]
+    },
+    "//#fix:es": {
+      "inputs": [".eslint.config.mjs", "packages/**/src/"]
+    },
+    "//#fix:style": {
+      "inputs": [".stylelintrc", "packages/**/src/"]
+    },
+    "//#fix:prettier": {
+      "inputs": [".prettierrc", ".prettierignore", "packages/**/src/"]
+    }
+  }
+}

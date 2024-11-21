@@ -1,0 +1,8 @@
+{
+  "*.{js,jsx,ts,tsx,mjs,cjs}": [
+    "pnpm run fix:es --",
+    "pnpm run fix:prettier --"
+  ],
+  "*.{css,less}": ["pnpm run fix:style --", "pnpm run fix:prettier --"],
+  "*.{json,yml,yaml,md}": ["pnpm run fix:prettier --"]
+}

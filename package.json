@@ -1,0 +1,63 @@
+{
+  "name": "giflite",
+  "version": "0.0.1",
+  "description": "GIF Lite Editor, 轻量级 Web GIF 编辑器",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky",
+    "commit": "git-cz",
+    "commitlint": "commitlint --edit",
+    "clean": "pnpm -r exec rimraf dist *.tsbuildinfo",
+    "start": "turbo run start",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "test:coverage": "turbo run test:coverage",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "lint": "turbo run lint:es lint:style lint:prettier lint:ts",
+    "lint:es": "eslint . --cache --quiet",
+    "lint:style": "stylelint \"**/*.{css,less}\" --customSyntax postcss-less --aei --cache",
+    "lint:prettier": "prettier --list-different \"**/*.{css,less,js,jsx,ts,tsx,mjs,cjs,json,yml,yaml,md}\"",
+    "lint:ts": "echo 1 || tsc -b packages/editor-app && pnpm run clean",
+    "fix": "turbo run fix:es fix:style fix:prettier",
+    "fix:es": "eslint . --cache --quiet --fix",
+    "fix:style": "stylelint \"**/*.{css,less}\" --customSyntax postcss-less --fix",
+    "fix:prettier": "prettier --write \"**/*.{css,less,js,jsx,ts,tsx,mjs,cjs,json,yml,yaml,md}\""
+  },
+  "keywords": [
+    "web",
+    "gif",
+    "editor",
+    "LeaferJS"
+  ],
+  "author": "Jiyu Shao <jiyu.shao@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@commitlint/cz-commitlint": "^19.5.0",
+    "@eslint/js": "^9.15.0",
+    "@types/node": "^22.9.1",
+    "commitizen": "^4.3.1",
+    "conventional-changelog-cli": "^5.0.0",
+    "eslint": "^9.15.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.37.2",
+    "globals": "^15.12.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "stylelint": "^16.10.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-order": "^6.0.4",
+    "turbo": "^2.3.0",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.15.0"
+  },
+  "packageManager": "pnpm@9.14.1"
+}
