@@ -1,0 +1,8 @@
+{
+  "name": "@giflite/configs",
+  "private": true,
+  "version": "1.0.0",
+  "description": "project configs",
+  "author": "Jiyu Shao <jiyu.shao@gmail.com>",
+  "license": "MIT"
+}
