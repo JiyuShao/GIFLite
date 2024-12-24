@@ -18,29 +18,43 @@
       "dependsOn": ["build"]
     },
     "//#lint:es": {
-      "inputs": [".eslint.config.mjs", "packages/**/src/"]
+      "inputs": [
+        ".eslint.config.mjs",
+        "packages/**/src/**/*.{js,jsx,ts,tsx,mjs,cjs}"
+      ]
     },
     "//#lint:style": {
-      "inputs": [".stylelintrc", "packages/**/src/"]
+      "inputs": [".stylelintrc", "packages/**/src/**/*.{css,less}"]
     },
     "//#lint:prettier": {
-      "inputs": [".prettierrc", ".prettierignore", "packages/**/src/"]
+      "inputs": [
+        ".prettierrc",
+        ".prettierignore",
+        "packages/**/src/**/*.{css,less,js,jsx,ts,tsx,mjs,cjs,json,yml,yaml,md}"
+      ]
     },
     "//#lint:ts": {
       "inputs": [
         "packages/configs/tsconfig/*.json",
         "packages/**/src/tsconfig.json",
-        "packages/**/src/**/*.ts"
+        "packages/**/src/**/*.{ts,tsx}"
       ]
     },
     "//#fix:es": {
-      "inputs": [".eslint.config.mjs", "packages/**/src/"]
+      "inputs": [
+        ".eslint.config.mjs",
+        "packages/**/src/**/*.{js,jsx,ts,tsx,mjs,cjs}"
+      ]
     },
     "//#fix:style": {
-      "inputs": [".stylelintrc", "packages/**/src/"]
+      "inputs": [".stylelintrc", "packages/**/src/**/*.{css,less}"]
     },
     "//#fix:prettier": {
-      "inputs": [".prettierrc", ".prettierignore", "packages/**/src/"]
+      "inputs": [
+        ".prettierrc",
+        ".prettierignore",
+        "packages/**/src/**/*.{css,less,js,jsx,ts,tsx,mjs,cjs,json,yml,yaml,md}"
+      ]
     }
   }
 }

@@ -1,0 +1,1 @@
+# @giflite/editor-module-skeleton

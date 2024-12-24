@@ -3,11 +3,12 @@
  *
  * @Author: Jiyu Shao <jiyu.shao@gmail.com>
  * @Date: 2024-11-25 11:25:31
+ * @LastEditTime: 2024-12-23 19:00:31
  */
-import { UTILS } from '../utils';
+import { Logger } from './logger';
 import { EditorBaseModule } from './module';
 
-const logger = UTILS.Logger.get('EditorBase');
+const logger = Logger.get('EditorBase');
 
 export interface EditorBaseOptions {
   container: HTMLDivElement;
@@ -56,13 +57,14 @@ export abstract class EditorBase<O extends EditorBaseOptions> {
   public registerModule<T extends EditorBaseModule, P extends any[]>(
     ModuleConstructor: new (...args: P) => T,
     args: P
-  ): void {
+  ): T {
     if (this.modules.get(ModuleConstructor)) {
       logger.debug(`module ${ModuleConstructor} already exists`);
-      return;
+      return this.modules.get(ModuleConstructor) as T;
     }
     const currentModule = new ModuleConstructor(...args);
     this.modules.set(ModuleConstructor, currentModule);
+    return currentModule;
   }
 
   /**

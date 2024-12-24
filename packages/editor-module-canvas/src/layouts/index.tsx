@@ -2,10 +2,10 @@
  * Layout 入口模块
  * @Author: Jiyu Shao <jiyu.shao@gmail.com>
  * @Date: 2024-12-07 17:45:07
- * @LastEditTime: 2024-12-07 17:48:14
+ * @LastEditTime: 2024-12-23 19:04:41
  */
 import React from 'react';
-import { UTILS } from '@giflite/editor-core';
+import { Store } from '@giflite/editor-core';
 import { CanvasModule } from '../module/canvas';
 import {
   CanvasModuleContext,
@@ -13,9 +13,7 @@ import {
 } from '../utils/context';
 // import App from './app';
 
-const {
-  Store: { useSnapshot },
-} = UTILS;
+const { useSnapshot } = Store;
 
 export interface LayoutProps {
   canvas: CanvasModule;
@@ -27,6 +25,7 @@ export default function Layout(props: LayoutProps) {
     <CanvasModuleContext.Provider value={props.canvas}>
       <CanvasModuleStoreContext.Provider value={canvasStoreSnap}>
         {/* <App /> */}
+        canvas
       </CanvasModuleStoreContext.Provider>
     </CanvasModuleContext.Provider>
   );

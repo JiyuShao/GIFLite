@@ -1,20 +1,20 @@
 /*
- * 画布模块 store
+ * 骨架模块 store
  * @Author: Jiyu Shao <jiyu.shao@gmail.com>
  * @Date: 2024-12-07 17:32:36
- * @LastEditTime: 2024-12-23 19:05:18
+ * @LastEditTime: 2024-12-24 10:22:07
  */
 import { Module, Store } from '@giflite/editor-core';
 
-export interface CanvasModuleStore extends Module.EditorBaseModuleStore {}
+export interface SkeletonModuleStore extends Module.EditorBaseModuleStore {}
 
-export function createStore(): CanvasModuleStore {
-  const state = Store.proxy<CanvasModuleStore>({});
+export function createStore(): SkeletonModuleStore {
+  const state = Store.proxy<SkeletonModuleStore>({});
 
   // Consider combining all store to devtools
   if (process.env.NODE_ENV === 'development') {
     Store.devtools(state, {
-      name: 'EditorModuleCanvas',
+      name: 'EditorModuleSkeleton',
     });
   }
 

@@ -18,10 +18,10 @@
   "dependencies": {
     "@quisido/proposal-async-context": "^0.0.2",
     "tapable": "^2.2.1",
-    "valtio": "^2.0.0"
+    "valtio": "^2.0.0",
+    "loglevel": "^1.9.2"
   },
   "devDependencies": {
-    "@giflite/configs": "workspace:^1.0.0",
-    "loglevel": "^1.9.2"
+    "@giflite/configs": "workspace:^1.0.0"
   }
 }

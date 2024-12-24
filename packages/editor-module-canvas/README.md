@@ -1,1 +1,1 @@
-# @giflite/editor-engine
+# @giflite/editor-module-canvas

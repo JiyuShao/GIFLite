@@ -1,14 +1,14 @@
-/* eslint-disable max-classes-per-file */
 /*
  * 编辑器业务模块
  *
  * @Author: Jiyu Shao <jiyu.shao@gmail.com>
  * @Date: 2024-11-25 11:25:31
+ * @LastEditTime: 2024-12-23 18:56:12
  */
 
-import { UTILS } from '../utils';
+import { Logger } from './logger';
 
-const logger = UTILS.Logger.get('EditorModule');
+const logger = Logger.get('EditorModule');
 
 export interface EditorBaseModuleOptions {}
 
