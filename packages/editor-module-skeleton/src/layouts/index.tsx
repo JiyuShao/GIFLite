@@ -2,7 +2,7 @@
  * Layout 入口模块
  * @Author: Jiyu Shao <jiyu.shao@gmail.com>
  * @Date: 2024-12-07 17:45:07
- * @LastEditTime: 2024-12-24 10:23:44
+ * @LastEditTime: 2025-01-03 15:12:06
  */
 import React from 'react';
 import { Store } from '@giflite/editor-core';
@@ -14,8 +14,7 @@ import {
   CanvasModuleContext,
   CanvasModuleStoreContext,
 } from '../utils/context';
-import Canvas from './canvas';
-// import App from './app';
+import Skeleton from './skeleton';
 
 const { useSnapshot } = Store;
 
@@ -33,9 +32,7 @@ export default function Layout(props: LayoutProps) {
       <SkeletonModuleStoreContext.Provider value={skeletonStoreSnap}>
         <CanvasModuleContext.Provider value={props.canvas}>
           <CanvasModuleStoreContext.Provider value={canvasStoreSnap}>
-            {/* <App /> */}
-            skeleton
-            <Canvas />
+            <Skeleton />
           </CanvasModuleStoreContext.Provider>
         </CanvasModuleContext.Provider>
       </SkeletonModuleStoreContext.Provider>

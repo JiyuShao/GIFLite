@@ -2,7 +2,7 @@
  * 画布模块
  * @Author: Jiyu Shao <jiyu.shao@gmail.com>
  * @Date: 2024-12-07 17:32:36
- * @LastEditTime: 2024-12-24 10:13:29
+ * @LastEditTime: 2025-01-03 17:01:10
  */
 import { createElement } from 'react';
 import { createRoot, Root } from 'react-dom/client';
@@ -11,6 +11,7 @@ import Layout, { LayoutProps } from '../layouts';
 import { CanvasModuleHooks, createHooks } from './hooks';
 import { CanvasModuleStore, createStore } from './store';
 import { CanvasModuleApis, createApis } from './apis';
+export * as CanvasType from './types';
 
 const logger = Logger.get('CanvasModule');
 

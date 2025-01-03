@@ -7,7 +7,7 @@
     "prepare": "husky",
     "commit": "git-cz",
     "commitlint": "commitlint --edit",
-    "clean": "pnpm -r exec rimraf dist *.tsbuildinfo",
+    "clean": "pnpm -r exec rimraf dist tsconfig.tsbuildinfo",
     "start": "turbo run start",
     "build": "turbo run build",
     "test": "turbo run test",

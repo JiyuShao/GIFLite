@@ -4,7 +4,11 @@
  *
  * @Author: Jiyu Shao <jiyu.shao@gmail.com>
  * @Date: 2024-11-25 11:25:31
- * @LastEditTime: 2024-12-24 09:59:41
+ * @LastEditTime: 2025-01-03 17:00:51
  */
-export { CanvasModule, type CanvasModuleOptions } from './module/canvas';
+export {
+  CanvasModule,
+  type CanvasModuleOptions,
+  CanvasType,
+} from './module/canvas';
 export { type CanvasModuleStore } from './module/store';

@@ -1,3 +1,8 @@
+/*
+ * @Author: Jiyu Shao <jiyu.shao@gmail.com>
+ * @Date: 2025-01-03 16:05:08
+ * @LastEditTime: 2025-01-03 16:05:21
+ */
 /** 深度只读属性 */
 export type DeepReadonly<T> = {
   readonly [P in keyof T]: DeepReadonly<T[P]>;
@@ -14,6 +19,8 @@ export type DeepPartialExclude<T, K extends keyof T & string> = DeepPartial<
 > &
   Pick<T, K>;
 
-export type AnyObject = Record<string, any>;
+type NotUndefined<T> = T extends undefined ? never : T;
+type NotNull<T> = T extends null ? never : T;
 
-export type NonUndefined<T> = T extends undefined ? never : T;
+/** 非空类型 */
+export type NotEmpty<T> = NotNull<NotUndefined<T>>;

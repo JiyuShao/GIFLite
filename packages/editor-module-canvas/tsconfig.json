@@ -1,9 +1,15 @@
 {
   "extends": "@giflite/configs/tsconfig/base.json",
   "compilerOptions": {
+    "composite": true,
+    "noEmit": false,
+    "outDir": "dist",
     "baseUrl": ".",
     "rootDir": "src",
-    "jsx": "react"
+    "jsx": "react",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "include": ["src"]
 }
