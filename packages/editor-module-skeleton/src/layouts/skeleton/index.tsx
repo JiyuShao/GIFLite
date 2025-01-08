@@ -3,7 +3,7 @@
  *
  * @Author: wangxuejin
  * @Date: 2024-10-21 14:38:51
- * @LastEditTime: 2025-01-07 18:04:12
+ * @LastEditTime: 2025-01-08 15:30:46
  */
 
 import React from 'react';
@@ -27,31 +27,43 @@ export default function Editor() {
     <I18nProvider locale="zh-CN">
       <Provider theme={darkTheme}>
         {/* <ContextMemu> */}
-        <View backgroundColor="gray-50" height="100vh">
+        <View colorVersion={6} backgroundColor="gray-50" height="100vh">
           <Grid
             areas={[
               'header  header  header',
-              'leftArea content rightArea',
-              'leftArea  footer  rightArea',
+              'toolBar content taskBar',
+              'toolBar  footer  taskBar',
             ]}
             columns={['size-500', 'auto', 'size-500']}
             rows={['size-500', 'auto', 'size-3000']}
             height="100vh"
-            gap="size-50"
+            gap="size-10"
           >
-            <View
-              backgroundColor="gray-100"
-              paddingX="size-75"
-              gridArea="header"
-            >
+            <View gridArea="header" colorVersion={6} backgroundColor="gray-100">
               <Header />
             </View>
-            <View backgroundColor="gray-100" gridArea="leftArea" />
-            <View backgroundColor="gray-50" gridArea="content">
+            <View
+              gridArea="toolBar"
+              colorVersion={6}
+              backgroundColor="gray-100"
+            />
+            <View
+              gridArea="content"
+              colorVersion={6}
+              backgroundColor="gray-100"
+            >
               <Canvas />
             </View>
-            <View backgroundColor="gray-100" gridArea="rightArea" />
-            <View backgroundColor="gray-100" gridArea="footer" />
+            <View
+              gridArea="taskBar"
+              colorVersion={6}
+              backgroundColor="gray-100"
+            />
+            <View
+              gridArea="footer"
+              colorVersion={6}
+              backgroundColor="gray-100"
+            />
           </Grid>
         </View>
         {/* </ContextMemu> */}

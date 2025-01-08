@@ -10,9 +10,15 @@ export function ButtonWrapper(props: ButtonWrapperProps) {
   return (
     <ActionButton
       isQuiet
-      UNSAFE_style={{ blockSize: 'unset', minInlineSize: 'unset' }}
+      UNSAFE_style={{
+        blockSize: 'unset',
+        minInlineSize: 'unset',
+        border: 'none',
+      }}
     >
-      <View {...rest}>{children}</View>
+      <View {...rest} UNSAFE_style={{ display: 'flex' }}>
+        {children}
+      </View>
     </ActionButton>
   );
 }
