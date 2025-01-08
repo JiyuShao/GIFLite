@@ -20,9 +20,11 @@
     "@adobe/react-spectrum": "^3.38.1",
     "@giflite/editor-core": "workspace:^1.0.0",
     "@giflite/editor-module-canvas": "workspace:^1.0.0",
+    "@spectrum-icons/workflow": "^4.2.16",
     "classnames": "2.3.2",
     "normalize.css": "^8.0.1",
     "react": "^19.0.0",
+    "react-aria-components": "^1.5.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {

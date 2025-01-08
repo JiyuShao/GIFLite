@@ -2,7 +2,7 @@
  * 画布模块
  * @Author: Jiyu Shao <jiyu.shao@gmail.com>
  * @Date: 2024-12-07 17:32:36
- * @LastEditTime: 2025-01-03 17:01:10
+ * @LastEditTime: 2025-01-07 18:11:34
  */
 import { createElement } from 'react';
 import { createRoot, Root } from 'react-dom/client';
@@ -41,7 +41,7 @@ export class CanvasModule extends Module.EditorBaseModule<
 
   public render(container: HTMLDivElement): void {
     if (this.root) {
-      logger.error('CanvasModule already rendered!');
+      logger.warn('CanvasModule already rendered!');
       return;
     }
     this.root = createRoot(container);
