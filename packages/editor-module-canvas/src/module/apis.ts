@@ -6,6 +6,7 @@
  */
 
 import { Module } from '@giflite/editor-core';
+
 import { CanvasModule } from './canvas';
 
 export interface CanvasModuleApis extends Module.EditorBaseModuleApis {}

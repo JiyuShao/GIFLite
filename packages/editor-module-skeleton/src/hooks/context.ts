@@ -7,11 +7,12 @@
  */
 
 import { useContext } from 'react';
+
 import {
-  SkeletonModuleContext,
   CanvasModuleContext,
-  SkeletonModuleStoreContext,
   CanvasModuleStoreContext,
+  SkeletonModuleContext,
+  SkeletonModuleStoreContext,
 } from '../utils/context';
 
 export const useSkeleton = () => useContext(SkeletonModuleContext);

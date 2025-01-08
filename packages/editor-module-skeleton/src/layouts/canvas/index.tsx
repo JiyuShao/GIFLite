@@ -7,6 +7,7 @@
  */
 
 import React, { useEffect, useRef } from 'react';
+
 import { useCanvas } from '../../hooks/context';
 
 export default function Canvas() {

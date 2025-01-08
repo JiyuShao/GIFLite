@@ -6,6 +6,7 @@
  * @LastEditTime: 2025-01-03 16:25:47
  */
 import { Logger } from '@giflite/editor-core';
+
 import { MIME_TYPES } from './mime-types';
 
 const logger = Logger.get('Clipboard');

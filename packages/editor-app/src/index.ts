@@ -3,11 +3,11 @@
  *
  * @Author: Jiyu Shao <jiyu.shao@gmail.com>
  * @Date: 2024-12-23 17:25:23
- * @LastEditTime: 2024-12-24 10:10:49
+ * @LastEditTime: 2025-01-08 17:35:50
  */
+import { Editor, Logger } from '@giflite/editor-core';
 import { CanvasModule } from '@giflite/editor-module-canvas';
 import { SkeletonModule } from '@giflite/editor-module-skeleton';
-import { Logger, Editor } from '@giflite/editor-core';
 
 const logger = Logger.get('EditorApp');
 

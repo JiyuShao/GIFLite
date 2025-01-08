@@ -4,15 +4,16 @@
  * @Date: 2024-12-07 17:45:07
  * @LastEditTime: 2025-01-03 15:12:06
  */
-import React from 'react';
 import { Store } from '@giflite/editor-core';
 import { CanvasModule } from '@giflite/editor-module-canvas';
+import React from 'react';
+
 import { SkeletonModule } from '../module/skeleton';
 import {
-  SkeletonModuleContext,
-  SkeletonModuleStoreContext,
   CanvasModuleContext,
   CanvasModuleStoreContext,
+  SkeletonModuleContext,
+  SkeletonModuleStoreContext,
 } from '../utils/context';
 import Skeleton from './skeleton';
 

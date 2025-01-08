@@ -4,8 +4,9 @@
  * @Date: 2024-12-07 17:45:07
  * @LastEditTime: 2024-12-23 19:04:41
  */
-import React from 'react';
 import { Store } from '@giflite/editor-core';
+import React from 'react';
+
 import { CanvasModule } from '../module/canvas';
 import {
   CanvasModuleContext,

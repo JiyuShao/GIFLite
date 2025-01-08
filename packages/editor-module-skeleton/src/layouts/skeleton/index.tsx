@@ -3,31 +3,33 @@
  *
  * @Author: wangxuejin
  * @Date: 2024-10-21 14:38:51
- * @LastEditTime: 2025-01-08 15:30:46
+ * @LastEditTime: 2025-01-08 17:44:26
  */
-
-import React from 'react';
-import {
-  // defaultTheme,
-  // lightTheme,
-  darkTheme,
-  Grid,
-  Provider,
-  View,
-} from '@adobe/react-spectrum';
-import { I18nProvider } from 'react-aria-components';
-// import ContextMemu from '../context-menu';
-import Canvas from '../canvas';
-import Header from './header';
 
 import 'normalize.css';
 
-export default function Editor() {
+import { defaultTheme, Grid, Provider, View } from '@adobe/react-spectrum';
+import React from 'react';
+import { I18nProvider } from 'react-aria-components';
+
+// import ContextMemu from '../context-menu';
+import { useSkeletonStore } from '@/hooks/context';
+
+import Canvas from '../canvas';
+import Header from './header';
+import styles from './index.less';
+
+export default function Layout() {
+  const { colorScheme } = useSkeletonStore();
   return (
     <I18nProvider locale="zh-CN">
-      <Provider theme={darkTheme}>
+      <Provider theme={defaultTheme} colorScheme={colorScheme}>
         {/* <ContextMemu> */}
-        <View colorVersion={6} backgroundColor="gray-50" height="100vh">
+        <View
+          colorVersion={6}
+          backgroundColor="gray-200"
+          UNSAFE_className={styles.skeleton}
+        >
           <Grid
             areas={[
               'header  header  header',
@@ -36,8 +38,8 @@ export default function Editor() {
             ]}
             columns={['size-500', 'auto', 'size-500']}
             rows={['size-500', 'auto', 'size-3000']}
-            height="100vh"
             gap="size-10"
+            height="100%"
           >
             <View gridArea="header" colorVersion={6} backgroundColor="gray-100">
               <Header />

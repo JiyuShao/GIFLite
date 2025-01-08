@@ -1,9 +1,10 @@
-import { createContext } from 'react';
 import {
   CanvasModule,
   CanvasModuleStore,
   CanvasType,
 } from '@giflite/editor-module-canvas';
+import { createContext } from 'react';
+
 import { SkeletonModule } from '../module/skeleton';
 import { SkeletonModuleStore } from '../module/store';
 

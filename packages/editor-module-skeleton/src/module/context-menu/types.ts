@@ -7,6 +7,7 @@
  */
 
 import { CanvasModule, CanvasType } from '@giflite/editor-module-canvas';
+
 import { SkeletonModule } from '../skeleton';
 
 export interface ContextMenuContext {

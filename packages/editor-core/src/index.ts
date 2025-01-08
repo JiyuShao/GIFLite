@@ -6,8 +6,7 @@
  * @LastEditTime: 2024-12-24 10:18:44
  */
 export * as Editor from './editor';
-export * as Module from './module';
-
-export { Logger } from './logger';
 export * as Hook from './hooks';
+export { Logger } from './logger';
+export * as Module from './module';
 export * as Store from './store';

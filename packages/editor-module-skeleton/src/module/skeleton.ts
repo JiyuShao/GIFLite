@@ -4,14 +4,15 @@
  * @Date: 2024-12-07 17:32:36
  * @LastEditTime: 2024-12-24 10:21:55
  */
+import { Logger, Module } from '@giflite/editor-core';
+import { CanvasModule } from '@giflite/editor-module-canvas';
 import { createElement } from 'react';
 import { createRoot, Root } from 'react-dom/client';
-import { Logger, Module } from '@giflite/editor-core';
+
 import Layout, { LayoutProps } from '../layouts';
-import { SkeletonModuleHooks, createHooks } from './hooks';
-import { SkeletonModuleStore, createStore } from './store';
-import { SkeletonModuleApis, createApis } from './apis';
-import { CanvasModule } from '@giflite/editor-module-canvas';
+import { createApis, SkeletonModuleApis } from './apis';
+import { createHooks, SkeletonModuleHooks } from './hooks';
+import { createStore, SkeletonModuleStore } from './store';
 
 const logger = Logger.get('SkeletonModule');
 

@@ -6,6 +6,7 @@
  */
 
 import { Module } from '@giflite/editor-core';
+
 import { SkeletonModule } from './skeleton';
 
 export interface SkeletonModuleApis extends Module.EditorBaseModuleApis {}

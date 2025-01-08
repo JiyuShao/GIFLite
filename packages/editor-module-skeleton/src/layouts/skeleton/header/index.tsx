@@ -1,21 +1,21 @@
-import React from 'react';
 import {
-  View,
-  Image,
-  Flex,
-  Text,
-  Item,
   Divider,
-  MenuTrigger,
+  Flex,
+  Image,
+  Item,
   Menu,
+  MenuTrigger,
   Section,
+  Text,
+  View,
 } from '@adobe/react-spectrum';
-
-import ShowMenu from '@spectrum-icons/workflow/ShowMenu';
 import ChevronDown from '@spectrum-icons/workflow/ChevronDown';
-import { ButtonWrapper } from '../../ui/button-wrapper';
-import Undo from '@spectrum-icons/workflow/Undo';
 import Redo from '@spectrum-icons/workflow/Redo';
+import ShowMenu from '@spectrum-icons/workflow/ShowMenu';
+import Undo from '@spectrum-icons/workflow/Undo';
+import React from 'react';
+
+import { ButtonWrapper } from '../../ui/button-wrapper';
 
 export default function Header() {
   // const { colorScheme } = useProvider();
@@ -35,9 +35,8 @@ export default function Header() {
               <View
                 width="size-100"
                 borderRadius="small"
-                UNSAFE_style={{
-                  backgroundColor: '#a85721',
-                }}
+                colorVersion={6}
+                backgroundColor="orange-400"
               >
                 <Text
                   alignSelf="center"

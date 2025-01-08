@@ -1,4 +1,4 @@
-import * as Utility from './utility';
 import * as Model from './model';
+import * as Utility from './utility';
 
-export { Utility, Model };
+export { Model, Utility };
