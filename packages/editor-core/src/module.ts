@@ -3,7 +3,7 @@
  *
  * @Author: Jiyu Shao <jiyu.shao@gmail.com>
  * @Date: 2024-11-25 11:25:31
- * @LastEditTime: 2024-12-23 18:56:12
+ * @LastEditTime: 2025-01-10 18:02:14
  */
 
 import { Logger } from './logger';
@@ -12,17 +12,8 @@ const logger = Logger.get('EditorModule');
 
 export interface EditorBaseModuleOptions {}
 
-export interface EditorBaseModuleHooks {}
-
-export interface EditorBaseModuleStore {}
-
-export interface EditorBaseModuleApis {}
-
 export abstract class EditorBaseModule<
   O extends EditorBaseModuleOptions = EditorBaseModuleOptions,
-  H extends EditorBaseModuleHooks = EditorBaseModuleHooks,
-  S extends EditorBaseModuleStore = EditorBaseModuleStore,
-  A extends EditorBaseModuleApis = EditorBaseModuleApis,
 > {
   protected options!: O;
 
@@ -31,11 +22,11 @@ export abstract class EditorBaseModule<
    */
   public abstract key: string;
 
-  public abstract hooks: H;
+  public abstract hooks;
 
-  public abstract store: S;
+  public abstract store;
 
-  public abstract apis: A;
+  public abstract apis;
 
   constructor(options: O) {
     this.options = options;

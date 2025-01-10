@@ -2,11 +2,11 @@
  * 画布模块 store
  * @Author: Jiyu Shao <jiyu.shao@gmail.com>
  * @Date: 2024-12-07 17:32:36
- * @LastEditTime: 2024-12-23 19:05:18
+ * @LastEditTime: 2025-01-10 18:04:40
  */
-import { Module, Store } from '@giflite/editor-core';
+import { Store } from '@giflite/editor-core';
 
-export interface CanvasModuleStore extends Module.EditorBaseModuleStore {}
+export interface CanvasModuleStore {}
 
 export function createStore(): CanvasModuleStore {
   const state = Store.proxy<CanvasModuleStore>({});

@@ -15,14 +15,13 @@ import ShowMenu from '@spectrum-icons/workflow/ShowMenu';
 import Undo from '@spectrum-icons/workflow/Undo';
 import React from 'react';
 
+import { useSkeleton, useSkeletonStore } from '@/hooks/context';
+
 import { ButtonWrapper } from '../../ui/button-wrapper';
 
 export default function Header() {
-  // const { colorScheme } = useProvider();
-
-  // const toggleTheme = () => {
-  //   setColorScheme(colorScheme === 'light' ? 'dark' : 'light');
-  // };
+  const skeleton = useSkeleton();
+  const { colorScheme } = useSkeletonStore();
 
   return (
     <View height="100%">
@@ -36,7 +35,7 @@ export default function Header() {
                 width="size-100"
                 borderRadius="small"
                 colorVersion={6}
-                backgroundColor="orange-400"
+                backgroundColor="chartreuse-800"
               >
                 <Text
                   alignSelf="center"
@@ -72,7 +71,16 @@ export default function Header() {
             <ButtonWrapper padding="size-50">
               <ShowMenu size="S" aria-label="Show menu" />
             </ButtonWrapper>
-            <Menu onAction={key => alert(key)} width="static-size-2400">
+            <Menu
+              onAction={key => {
+                if (key === 'color-scheme') {
+                  skeleton.apis.toggleColorScheme();
+                } else {
+                  alert(key);
+                }
+              }}
+              width="static-size-2400"
+            >
               <Section>
                 <Item key="new">New</Item>
                 <Item key="open">Open</Item>
@@ -88,6 +96,11 @@ export default function Header() {
               </Section>
 
               <Section>
+                <Item key="color-scheme">
+                  <Text>
+                    Color Scheme({colorScheme === 'dark' ? 'Dark' : 'Light'})
+                  </Text>
+                </Item>
                 <Item key="settings">Settings...</Item>
               </Section>
             </Menu>
@@ -177,7 +190,7 @@ export default function Header() {
                 />
               </ButtonWrapper>
               <Menu onAction={key => alert(key)} width="static-size-2400">
-                <Section title="Hello, I'm Jiyu Shao. Follow me on:">
+                <Section title="Hello, I'm Jiyu Shao. Please follow me on:">
                   <Item key="github">Github</Item>
                   <Item key="blog">Blog</Item>
                 </Section>

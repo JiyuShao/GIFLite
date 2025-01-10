@@ -2,7 +2,7 @@
  * 骨架模块
  * @Author: Jiyu Shao <jiyu.shao@gmail.com>
  * @Date: 2024-12-07 17:32:36
- * @LastEditTime: 2024-12-24 10:21:55
+ * @LastEditTime: 2025-01-10 18:01:51
  */
 import { Logger, Module } from '@giflite/editor-core';
 import { CanvasModule } from '@giflite/editor-module-canvas';
@@ -10,9 +10,9 @@ import { createElement } from 'react';
 import { createRoot, Root } from 'react-dom/client';
 
 import Layout, { LayoutProps } from '../layouts';
-import { createApis, SkeletonModuleApis } from './apis';
-import { createHooks, SkeletonModuleHooks } from './hooks';
-import { createStore, SkeletonModuleStore } from './store';
+import { createApis } from './apis';
+import { createHooks } from './hooks';
+import { createStore } from './store';
 
 const logger = Logger.get('SkeletonModule');
 
@@ -23,12 +23,7 @@ export interface SkeletonModuleOptions extends Module.EditorBaseModuleOptions {
 /**
  * 骨架模块
  */
-export class SkeletonModule extends Module.EditorBaseModule<
-  SkeletonModuleOptions,
-  SkeletonModuleHooks,
-  SkeletonModuleStore,
-  SkeletonModuleApis
-> {
+export class SkeletonModule extends Module.EditorBaseModule<SkeletonModuleOptions> {
   private root?: Root;
 
   private canvas: CanvasModule;

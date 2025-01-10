@@ -2,17 +2,13 @@
  * 画布模块 hooks
  * @Author: Jiyu Shao <jiyu.shao@gmail.com>
  * @Date: 2024-12-07 17:32:36
- * @LastEditTime: 2024-12-23 19:05:02
+ * @LastEditTime: 2025-01-10 18:04:07
  */
-import { Hook, Module } from '@giflite/editor-core';
+import { Hook } from '@giflite/editor-core';
 
 const { AsyncHook } = Hook;
 
-export interface CanvasModuleHooks extends Module.EditorBaseModuleHooks {
-  editorScale: Hook.AsyncHook<object, object>;
-}
-
-export function createHooks(): CanvasModuleHooks {
+export function createHooks() {
   return {
     editorScale: new AsyncHook(['arg1']),
   };
